@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Apprendre le HTML - Tutoriel Interactif</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            background-color: #f0f8ff;
+        }
+        h1, h2, h3 {
+            color: #2c3e50;
+        }
+        p, li {
+            color: #34495e;
+            line-height: 1.8;
+        }
+        code {
+            background-color: #ecf0f1;
+            padding: 4px 8px;
+            border-radius: 6px;
+            font-family: monospace;
+            display: block;
+            white-space: pre-wrap;
+        }
+        .example, .result {
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 8px;
+        }
+        .example {
+            background: #ffeaa7;
+            border-left: 6px solid #fdcb6e;
+        }
+        .result {
+            background: #dff9fb;
+            border-left: 6px solid #00cec9;
+        }
+        footer {
+            margin-top: 50px;
+            text-align: center;
+            color: #636e72;
+            font-size: 0.9em;
+        }
+        .code-area {
+            width: 100%;
+            height: 200px;
+            font-family: monospace;
+            padding: 10px;
+            border: 1px solid #dfe6e9;
+            border-radius: 6px;
+            background-color: #ffffff;
+        }
+        .preview {
+            padding: 15px;
+            margin-top: 15px;
+            background: #fff;
+            border: 2px solid #b2bec3;
+            border-radius: 8px;
+            min-height: 50px;
+        }
+        .button {
+            padding: 10px 15px;
+            margin-top: 10px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .button:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Apprendre le HTML : Tutoriel Interactif</h1>
+
+    <p>Bienvenue dans ce tutoriel ! Cette page vous permet d'apprendre HTML et de tester vos codes directement.</p>
+
+    <h2>1. Structure de base d'une page HTML</h2>
+    <p>Voici la structure de base d'une page HTML :</p>
+
+    <div class="example">
+<code>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="fr"&gt;
+  &lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Ma première page&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    Bonjour tout le monde !
+  &lt;/body&gt;
+&lt;/html&gt;
+</code>
+    </div>
+
+    <p><strong>Tester ton code :</strong></p>
+    <textarea class="code-area" id="code1">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="fr"&gt;
+  &lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Ma première page&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    Bonjour tout le monde !
+  &lt;/body&gt;
+&lt;/html&gt;
+    </textarea>
+    <br>
+    <button class="button" onclick="updatePreview('code1', 'preview1')">Voir le résultat</button>
+
+    <h3>Résultat : </h3>
+    <div class="preview" id="preview1">
+        <!-- Résultat de la prévisualisation du code -->
+    </div>
+
+    <h2>2. Tester un lien HTML</h2>
+    <p>Créons un lien vers Google. Voici le code :</p>
+
+    <div class="example">
+<code>
+&lt;a href="https://www.google.com"&gt;Cliquez ici pour visiter Google&lt;/a&gt;
+</code>
+    </div>
+
+    <p><strong>Tester ton lien :</strong></p>
+    <textarea class="code-area" id="code2">
+&lt;a href="https://www.google.com"&gt;Cliquez ici pour visiter Google&lt;/a&gt;
+    </textarea>
+    <br>
+    <button class="button" onclick="updatePreview('code2', 'preview2')">Voir le résultat</button>
+
+    <h3>Résultat : </h3>
+    <div class="preview" id="preview2">
+        <!-- Résultat de la prévisualisation du code -->
+    </div>
+
+    <h2>3. Tester une image HTML</h2>
+    <p>Ajoutons une image de démonstration :</p>
+
+    <div class="example">
+<code>
+&lt;img src="https://via.placeholder.com/150" alt="exemple d'image"&gt;
+</code>
+    </div>
+
+    <p><strong>Tester ton image :</strong></p>
+    <textarea class="code-area" id="code3">
+&lt;img src="https://via.placeholder.com/150" alt="exemple d'image"&gt;
+    </textarea>
+    <br>
+    <button class="button" onclick="updatePreview('code3', 'preview3')">Voir le résultat</button>
+
+    <h3>Résultat : </h3>
+    <div class="preview" id="preview3">
+        <!-- Résultat de la prévisualisation de l'image -->
+    </div>
+
+    <footer>
+        © M.BLORFAN 2025
+    </footer>
+
+    <script>
+        function updatePreview(codeId, previewId) {
+            var code = document.getElementById(codeId).value;
+            document.getElementById(previewId).innerHTML = code;
+        }
+    </script>
+
+</body>
+</html>
